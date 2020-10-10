@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('movie', \App\Http\Controllers\MovieController::class);
+
+Route::get('genre/{id}', [\App\Http\Controllers\GenresController::class, 'show']);

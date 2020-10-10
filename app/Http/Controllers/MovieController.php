@@ -3,32 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\MovieDetailsResource;
-use App\Http\Resources\MovieResource;
 use App\Http\Resources\MoviesResource;
 use App\Service\TMDBApi;
-use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-    /**
-     * @var TMDBApi
-     */
-    private $service;
-
-    /**
-     * MovieController constructor.
-     */
-    public function __construct()
-    {
-        $this->service = new TMDBApi();
-    }
-
     /**
      * @return MoviesResource
      */
     public function index()
     {
-        return MoviesResource::make($this->service->getMovies());
+        return MoviesResource::make(TMDBApi::getMovies());
     }
 
     /**
@@ -37,6 +22,6 @@ class MovieController extends Controller
      */
     public function show(int $id)
     {
-        return MovieDetailsResource::make($this->service->getMovie($id));
+        return MovieDetailsResource::make(TMDBApi::getMovie($id));
     }
 }
