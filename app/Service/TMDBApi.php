@@ -4,7 +4,6 @@
 namespace App\Service;
 
 use Illuminate\Support\Facades\Http;
-use mysql_xdevapi\Exception;
 
 class TMDBApi
 {
