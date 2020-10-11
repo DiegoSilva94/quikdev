@@ -10,6 +10,7 @@ class MovieController extends Controller
 {
     /**
      * @return MoviesResource
+     * @throws \Exception
      */
     public function index()
     {
@@ -19,6 +20,7 @@ class MovieController extends Controller
     /**
      * @param int $id
      * @return MovieDetailsResource
+     * @throws \Exception
      */
     public function show(int $id)
     {

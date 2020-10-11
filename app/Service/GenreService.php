@@ -35,7 +35,7 @@ class GenreService
     }
 
     /**
-     * Update Genres
+     * @throws \Exception
      */
     public static function updateGenres()
     {

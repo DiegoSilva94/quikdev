@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\GenreResource;
-use App\Models\Genre;
 use App\Service\GenreService;
 
 class GenresController extends Controller
