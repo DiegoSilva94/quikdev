@@ -20,7 +20,7 @@ class MovieResource extends JsonResource
             'name' => $this->resource['title'],
             'overview' => $this->resource['overview'],
             'release_date' => $this->resource['release_date'],
-            'genre' => $this->resource['genre_ids']
+            'genres' => $this->resource['genre_ids']
         ];
     }
 }

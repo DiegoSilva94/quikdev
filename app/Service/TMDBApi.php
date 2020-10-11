@@ -54,7 +54,7 @@ class TMDBApi
      */
     public static function getGenres()
     {
-        $response = Http::get('https://api.themoviedb.org/3/genre/movie/list/?api_key=' . env('TMDB_API_KEY'));
+        $response = Http::get('https://api.themoviedb.org/3/genre/movie/list?api_key=' . env('TMDB_API_KEY') . '&language=en-US');
         return $response->json();
     }
 }
